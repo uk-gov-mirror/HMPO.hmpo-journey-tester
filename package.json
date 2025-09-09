@@ -14,7 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "debug": "^4.3.3",
+    "debug": "4.3.3",
     "deep-clone-merge": "^1.5.3",
     "json5": "^2.2.0",
     "jsonfile": "^6.1.0",
