@@ -1,4 +1,4 @@
-# passports-grey-box-tester
+# hmpo-journey-tester
 An ultra lightweight smoke tester for GDS based forms
 
 This is an ultra lightweight smoke tester allowing you to run through multiple parts of your journey and validate that the end point was reached.
@@ -7,13 +7,12 @@ It assumes a number of defaults but can be overridden as required on a page/step
 
 It is explicitly intended to be flexible - the same configuration should be run against multiple stages of deployment, e.g `integration`, `staging` and `production` without requiring any changes. This enables you to ensure that even with many microservices involved, that your key journey is still functional. Consider this your 100 000 feet view - anything more complicated than successfully reaching the end path should be considered for a more low level test. 
 
-It is designed to target `passports-form-wizard` forms, but can be applied to similar GDS style pages.
+It is designed to target `hmpo-form-wizard` forms, but can be applied to similar GDS style pages.
 
 # Technology
 - Google Puppeteer
 - Selenium Webdriver
 - Axe
-
 
 # Config
 A journey is a JSON file containing the following sections:
@@ -86,7 +85,7 @@ A journey is a JSON file containing the following sections:
     "pages": {
         "/start-service/page3": {
             "fields": {
-                "#is-uk-application-false": "selected",
+                "#is-uk-application": true,
                 "#country-of-application": "SY"
             }
         },
